@@ -75,3 +75,18 @@ colorscheme molokai
 "设置macvim窗口大小
 autocmd! bufwritepost .vimrc source ~/.vimrc
 "定义了一个自动命令，每次写入.vimrc后，都会执行这个自动命令，source一次~/.vimrc文件
+"powerline{
+  set guifont=PowerlineSymbols\ for\ Powerline
+  set nocompatible
+  set t_Co=256
+  let g:Powerline_symbols = 'fancy'
+"}
+"
+"taglist{
+  let Tlist_Show_One_File = 1            "只显示当前文件的taglist，默认是显示多个
+  let Tlist_Exit_OnlyWindow = 1          "如果taglist是最后一个窗口，则退出vim
+  let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist
+  let Tlist_GainFocus_On_ToggleOpen = 1  "打开taglist时，光标保留在taglist窗口
+  let Tlist_Ctags_Cmd='/opt/local/bin/ctags'  "设置ctags命令的位置
+  nnoremap <leader>tl : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
+"}
